@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Restaurantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item *ngFor="let rest of restaurantes" [routerLink]="['./',rest.id]">
+
+      <ion-avatar slot="start">
+        <ion-img [src]="rest.imgUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>{{rest.titulo}}</ion-label>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
