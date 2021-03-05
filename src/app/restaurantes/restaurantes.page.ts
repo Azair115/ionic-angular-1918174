@@ -10,35 +10,14 @@ import { RestauranteService } from './restaurante.service';
 })
 export class RestaurantesPage implements OnInit {
 
-  restaurantes: Restaurante[];
+  restaurantes: Restaurante[] = [];
 
-  constructor(private restauranteService:RestauranteService) { }
+  constructor() { }
+
 
   ngOnInit() {
-    console.log('Angular ngOnInit');
-    //this.restaurantes = this.restauranteService.getAllRestaurantes();
- }
-
- ionViewWillEnter(){
-  console.log('Ionic ionViewWillEnter');
-  this.restaurantes = this.restauranteService.getAllRestaurantes();
- }
-
- ionViewDidEnter(){
-  console.log('Ionic ionViewDidEnter');
- }
-
- ionViewWillLeave(){
-  console.log('Ionic ionViewWillLeave');
- }
-
- ionViewDidLeave(){
-  console.log('Ionic ionViewDidLeave');
- }
-
- ngOnDestroy(){
-  console.log('Angular ngOnDestroy');
- }
+  }
+  
 
 }
 

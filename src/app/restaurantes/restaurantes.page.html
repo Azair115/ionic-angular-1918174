@@ -1,21 +1,15 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Restaurantes</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-tabs>
 
-<ion-content>
+  <ion-tab-bar slot="start">
+    <ion-tab-button tab="descubrir">
+      <ion-label>Descubrir</ion-label>
+      <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="ofertas">
+      <ion-label>Ofertas</ion-label>
+      <ion-icon name="ticket-outline"></ion-icon>
+    </ion-tab-button>
 
-  <ion-list>
 
-    <ion-item *ngFor="let rest of restaurantes" [routerLink]="['./',rest.id]">
-
-      <ion-avatar slot="start">
-        <ion-img [src]="rest.imgUrl"></ion-img>
-      </ion-avatar>
-      <ion-label>{{rest.titulo}}</ion-label>
-
-    </ion-item>
-  </ion-list>
-
-</ion-content>
+  </ion-tab-bar>
+</ion-tabs>
