@@ -14,14 +14,19 @@ export class ReservacionesPage implements OnInit {
   reservaciones : Reservacion [] ;
 
   constructor(
-
     private reservacionService : ReservacionService
-    ) { }
+    ) {
+
+    }
 
   ngOnInit() {
 
     this.reservaciones = this.reservacionService.getAllReservaciones () ;
 
+  }
+
+  ionViewWillEnter(){
+    this.reservaciones = this.reservacionService.getAllReservaciones();
   }
 
 }
